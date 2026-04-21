@@ -30,3 +30,58 @@ EGN-6217-Final-Project/
 │
 ├── requirements.txt
 └── Deliverables/ # Project reports and IEEE documentation
+```
+
+---
+## ⚙️ Installation & Setup
+
+### 1. Clone the Repository
+```bash
+git clone [https://github.com/AnshulRaghu/EGN-6217-Final-Project.git](https://github.com/AnshulRaghu/EGN-6217-Final-Project.git)
+cd EGN-6217-Final-Project
+```
+
+---
+
+### 2. Install Dependencies
+Ensure you have Python 3.8+ installed, then run:
+```bash
+pip install -r requirements.txt
+```
+
+🚀 Running the Pipeline
+▶️ Option 1: Training and Evaluation
+To retrain the models or view the detailed evaluation metrics (Accuracy, F1-Score), run the main notebook:
+```bash
+jupyter notebook notebooks/train_models.ipynb
+```
+
+🖥️ Option 2: Launch the Interface
+To test predictions in a user-friendly environment, launch the Streamlit app:
+```bash
+streamlit run ui/app_v2.py
+```
+
+📊 Performance SummaryThe following metrics represent the final evaluation of each model on the test dataset:
+Model,Accuracy,F1-Score
+LSTM,~0.70,~0.69
+GRU,~0.73,~0.72
+Transformer,~0.76,~0.75
+Sources
+https://gemini.google.com/app/6e0ad92002629a85
+
+📈 Key InsightsTransformer Dominance:
+The Transformer model achieved the highest performance, showcasing its ability to capture broad contextual relationships within transaction sequences better than recurrent architectures
+GRU vs. LSTM: GRU slightly outperformed LSTM while maintaining higher computational efficiency (fewer parameters)
+
+⚠️ Known Issues & Limitations❗ Lack of User IDs: The current dataset does not distinguish between individual users; sequences represent general population patterns.❗ Feature Constraints: Models currently rely solely on category sequences. Factors like transaction amount and time-of-day are not yet integrated.❗ Dataset Size: Results are based on a limited academic dataset; performance may vary with larger-scale, real-world data.❗ Minimal UI: The interface is a proof-of-concept for demonstration and lacks production-grade error handling.
+
+⚠️ Usage WarningsThis system is built for academic and research purposes only.Not Financial Advice: Predictions should never be used as a basis for real-world financial decisions or budgeting.
+
+---
+
+📬 Contact
+Anshul Raghuvanshi
+* 🔗 GitHub: https://github.com/AnshulRaghu
+* 📧 Email: anshul2raghu@gmail.com
+* Developed for EGN-6217: Deep Learning Final Project
