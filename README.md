@@ -50,13 +50,16 @@ pip install -r requirements.txt
 ```
 
 🚀 Running the Pipeline
+
 ▶️ Option 1: Training and Evaluation
+
 To retrain the models or view the detailed evaluation metrics (Accuracy, F1-Score), run the main notebook:
 ```bash
 jupyter notebook notebooks/train_models.ipynb
 ```
 
 🖥️ Option 2: Launch the Interface
+
 To test predictions in a user-friendly environment, launch the Streamlit app:
 ```bash
 streamlit run ui/app_v2.py
@@ -71,9 +74,9 @@ The following metrics represent the final evaluation of each model on the test d
 | GRU         | ~0.73    | ~0.72    |
 | Transformer | ~0.76    | ~0.75    |
 
-📈 Key InsightsTransformer Dominance:
-The Transformer model achieved the highest performance, showcasing its ability to capture broad contextual relationships within transaction sequences better than recurrent architectures
-GRU vs. LSTM: GRU slightly outperformed LSTM while maintaining higher computational efficiency (fewer parameters)
+📈 Key Insights
+* Transformer Dominance: The Transformer model achieved the highest performance, showcasing its ability to capture broad contextual relationships within transaction sequences better than recurrent architectures
+* GRU vs. LSTM: GRU slightly outperformed LSTM while maintaining higher computational efficiency (fewer parameters)
 
 ⚠️ Known Issues & Limitations
 * ❗ Lack of User IDs: The current dataset does not distinguish between individual users; sequences represent general population patterns
